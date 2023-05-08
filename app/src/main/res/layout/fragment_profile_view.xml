@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslToolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/ic_back_navs"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvProfile" />
+
+        <ImageView
+            android:id="@+id/ivDetailNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/ic_detail_navs"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvProfile" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cslToolbar1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cslToolbarBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvVector"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp">
+
+                    <ImageView
+                        android:id="@+id/ivVector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic_vector1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvVectorTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:layout_marginEnd="172dp"
+                        android:text="Stefani Wong"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.483"
+                        app:layout_constraintStart_toEndOf="@+id/ivVector"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvVectorDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="148dp"
+                        android:text="About 3 minutes ago"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivVector"
+                        app:layout_constraintTop_toBottomOf="@+id/tvVectorTitle"
+                        app:layout_constraintVertical_bias="0.122" />
+
+                    <ImageView
+                        android:layout_width="74dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ic_edit_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.714"
+                        app:layout_constraintStart_toEndOf="@+id/tvVectorTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvHeight"
+                android:layout_width="113dp"
+                android:layout_height="81dp"
+                android:layout_marginStart="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvVector">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:text="180cm"
+                    android:textColor="#92A3FD"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Height"
+                    android:textSize="@dimen/_12ssp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvWeight"
+                android:layout_width="112dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:layout_constraintStart_toEndOf="@+id/cvHeight"
+                app:layout_constraintTop_toBottomOf="@+id/cvVector">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:text="65kg"
+                    android:textColor="#92A3FD"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Weight"
+                    android:textSize="@dimen/_12ssp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAge"
+                android:layout_width="119dp"
+                android:layout_height="83dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:layout_constraintStart_toEndOf="@+id/cvWeight"
+                app:layout_constraintTop_toBottomOf="@+id/cvVector">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:text="22yo"
+                    android:textColor="#92A3FD"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Age"
+                    android:textSize="@dimen/_12ssp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAccount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/cvAge"
+                app:layout_constraintStart_toStartOf="@+id/cvHeight"
+                app:layout_constraintTop_toBottomOf="@+id/cvWeight">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Account"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glH1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.15" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.09" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glV3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.9" />
+
+                    <ImageView
+                        android:id="@+id/ivAccountProfile"
+                        android:layout_width="29dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_account_profile"
+                        app:layout_constraintStart_toStartOf="@+id/glV2"
+                        app:layout_constraintTop_toBottomOf="@+id/glH1" />
+
+                    <TextView
+                        android:id="@+id/tvPersonalData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Personal Data"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivAccountProfile"
+                        app:layout_constraintStart_toEndOf="@+id/ivAccountProfile"
+                        app:layout_constraintTop_toTopOf="@+id/ivAccountProfile" />
+
+                    <ImageView
+                        android:id="@+id/ivstoke1"
+                        android:layout_width="13dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_account_stroke"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvPersonalData"
+                        app:layout_constraintEnd_toEndOf="@+id/glV3"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvPersonalData"
+                        app:layout_constraintTop_toTopOf="@+id/tvPersonalData"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/ivAchivement"
+                        android:layout_width="29dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_account_achivement"
+                        app:layout_constraintStart_toStartOf="@+id/glV2"
+                        app:layout_constraintTop_toBottomOf="@+id/ivAccountProfile" />
+
+                    <TextView
+                        android:id="@+id/tvAchievement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Achievement"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivAchivement"
+                        app:layout_constraintStart_toEndOf="@+id/ivAchivement"
+                        app:layout_constraintTop_toTopOf="@+id/ivAchivement" />
+
+                    <ImageView
+                        android:id="@+id/ivstoke2"
+                        android:layout_width="13dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_account_stroke"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAchievement"
+                        app:layout_constraintEnd_toEndOf="@+id/glV3"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvAchievement"
+                        app:layout_constraintTop_toTopOf="@+id/tvAchievement"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/ivActivityHistory"
+                        android:layout_width="29dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_activity_history"
+                        app:layout_constraintStart_toStartOf="@+id/glV2"
+                        app:layout_constraintTop_toBottomOf="@+id/ivAchivement" />
+
+                    <TextView
+                        android:id="@+id/tvActivityHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Activity History"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivActivityHistory"
+                        app:layout_constraintStart_toEndOf="@+id/ivActivityHistory"
+                        app:layout_constraintTop_toTopOf="@+id/ivActivityHistory" />
+
+                    <ImageView
+                        android:id="@+id/ivstoke3"
+                        android:layout_width="13dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_account_stroke"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvActivityHistory"
+                        app:layout_constraintEnd_toEndOf="@+id/glV3"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvActivityHistory"
+                        app:layout_constraintTop_toTopOf="@+id/tvActivityHistory"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/ivWorkoutProgress"
+                        android:layout_width="29dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_workout_progress"
+                        app:layout_constraintStart_toStartOf="@+id/glV2"
+                        app:layout_constraintTop_toBottomOf="@+id/ivActivityHistory" />
+
+                    <TextView
+                        android:id="@+id/tvWorkoutProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Workout Progress"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivWorkoutProgress"
+                        app:layout_constraintStart_toEndOf="@+id/ivWorkoutProgress"
+                        app:layout_constraintTop_toTopOf="@+id/ivWorkoutProgress" />
+
+                    <ImageView
+                        android:id="@+id/ivstoke4"
+                        android:layout_width="13dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_account_stroke"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvWorkoutProgress"
+                        app:layout_constraintEnd_toEndOf="@+id/glV3"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvWorkoutProgress"
+                        app:layout_constraintTop_toTopOf="@+id/tvWorkoutProgress"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvNotification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/cvAccount"
+                app:layout_constraintStart_toStartOf="@+id/cvAccount"
+                app:layout_constraintTop_toBottomOf="@+id/cvAccount">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Notofication"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:src="@drawable/notification" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:text="Pop-up Notification"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp" />
+
+                <Switch
+                    android:id="@+id/simpleSwitch"
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/_220sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:checked="true"/>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvOthers"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/cvNotification"
+                app:layout_constraintStart_toStartOf="@+id/cvNotification"
+                app:layout_constraintTop_toBottomOf="@+id/cvNotification">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Others"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glH3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.15" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glV6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.09" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glV7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.9" />
+
+                    <ImageView
+                        android:id="@+id/ivContactUs"
+                        android:layout_width="29dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_message"
+                        app:layout_constraintStart_toStartOf="@+id/glV6"
+                        app:layout_constraintTop_toBottomOf="@+id/glH3" />
+
+                    <TextView
+                        android:id="@+id/tvContactUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Contact Us"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivContactUs"
+                        app:layout_constraintStart_toEndOf="@+id/ivContactUs"
+                        app:layout_constraintTop_toTopOf="@+id/ivContactUs" />
+
+                    <ImageView
+                        android:id="@+id/ivstoke5"
+                        android:layout_width="13dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_account_stroke"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvContactUs"
+                        app:layout_constraintEnd_toEndOf="@+id/glV7"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvContactUs"
+                        app:layout_constraintTop_toTopOf="@+id/tvContactUs"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/ivPrivacyPolicy"
+                        android:layout_width="29dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_shield_done"
+                        app:layout_constraintStart_toStartOf="@+id/glV6"
+                        app:layout_constraintTop_toBottomOf="@+id/ivContactUs" />
+
+                    <TextView
+                        android:id="@+id/tvPrivacyPolicy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Privacy Policy"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivPrivacyPolicy"
+                        app:layout_constraintStart_toEndOf="@+id/ivPrivacyPolicy"
+                        app:layout_constraintTop_toTopOf="@+id/ivPrivacyPolicy" />
+
+                    <ImageView
+                        android:id="@+id/ivstoke8"
+                        android:layout_width="13dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_account_stroke"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvPrivacyPolicy"
+                        app:layout_constraintEnd_toEndOf="@+id/glV7"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvPrivacyPolicy"
+                        app:layout_constraintTop_toTopOf="@+id/tvPrivacyPolicy"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/ivSettings"
+                        android:layout_width="29dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_activity_history"
+                        app:layout_constraintStart_toStartOf="@+id/glV6"
+                        app:layout_constraintTop_toBottomOf="@+id/ivPrivacyPolicy" />
+
+                    <TextView
+                        android:id="@+id/tvSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Settings"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivSettings"
+                        app:layout_constraintStart_toEndOf="@+id/ivSettings"
+                        app:layout_constraintTop_toTopOf="@+id/ivSettings" />
+
+                    <ImageView
+                        android:id="@+id/ivstoke9"
+                        android:layout_width="13dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_account_stroke"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvSettings"
+                        app:layout_constraintEnd_toEndOf="@+id/glV7"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvSettings"
+                        app:layout_constraintTop_toTopOf="@+id/tvSettings"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

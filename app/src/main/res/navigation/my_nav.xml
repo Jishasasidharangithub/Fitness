@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.fitness.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment2"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment3"
+            app:destination="@id/viewPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.fitness.onboardig.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+
+        <action
+            android:id="@+id/action_viewPagerFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.fitness.signup_and_login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+
+
+        <action
+            android:id="@+id/action_registerFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.fitness.signup_and_login.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_profileFragment_to_fitnessFragment"
+            app:destination="@id/fitnessFragment"/>
+
+    </fragment>
+
+
+        <fragment
+            android:id="@+id/fitnessFragment"
+            android:name="com.example.fitness.signup_and_login.FitnessFragment"
+            android:label="fragment_fitness"
+            tools:layout="@layout/fragment_fitness">
+
+            <action
+                android:id="@+id/action_fitnessFragment_to_loginFragment"
+                app:destination="@id/loginFragment" />
+
+        </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.fitness.signup_and_login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_backtohomeFragment"
+            app:destination="@id/backtohomeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/backtohomeFragment"
+        android:name="com.example.fitness.signup_and_login.BackHomeFragment"
+        android:label="fragment_backtohome"
+        tools:layout="@layout/fragment_back_home">
+
+        <action
+            android:id="@+id/action_backtohomeFragment_to_scrollviewFragment"
+            app:destination="@id/scrollviewFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/scrollviewFragment"
+        android:name="com.example.fitness.dashboard.ScrollViewFragment"
+        android:label="fragment_scrollview"
+        tools:layout="@layout/fragment_scroll_view">
+
+        <action
+            android:id="@+id/action_scrollviewFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+
+        <action
+            android:id="@+id/action_scrollviewFragment_to_activitytrackerFragment"
+            app:destination="@id/activitytrackerFragment" />
+
+        <action
+            android:id="@+id/action_scrollviewFragment_to_workouttrackerscrollviewFragment"
+            app:destination="@id/workouttrackerscrollviewFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.fitness.dashboard.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/activitytrackerFragment"
+        android:name="com.example.fitness.dashboard.ActivityTrackerFragment"
+        android:label="fragment_activity_tracker"
+        tools:layout="@layout/fragment_activity_tracker">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/workouttrackerscrollviewFragment"
+        android:name="com.example.fitness.workouttracker.WorkOutTrackerScrollViewFragment"
+        android:label="fragment_workout_tracker_scrollview"
+        tools:layout="@layout/fragment_work_out_tracker_scroll_view">
+
+        <action
+            android:id="@+id/action_workouttrackerscrollviewFragment_to_fullbodyFragment"
+            app:destination="@id/fullbodyFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fullbodyFragment"
+        android:name="com.example.fitness.workouttracker.FullBodyFragment"
+        android:label="fragment_fullbody"
+        tools:layout="@layout/fragment_full_body"
+        >
+
+        <action
+            android:id="@+id/action_fullbodyFragment_to_jampingjackFragment"
+            app:destination="@id/jampingjackFragment" />
+
+        <action
+            android:id="@+id/action_fullbodyFragment_to_workoutscheduleFragment"
+            app:destination="@id/workoutscheduleFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/jampingjackFragment"
+        android:name="com.example.fitness.execersise_detail.JampingJakeFragment"
+        android:label="fragment_jampingjack"
+        tools:layout="@layout/fragment_jamping_jake"
+        >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/workoutscheduleFragment"
+        android:name="com.example.fitness.workouttracker.WorkoutScheduleFragment"
+        android:label="fragment_workout_schedule"
+        tools:layout="@layout/fragment_workout_schedule"
+        >
+        <action
+            android:id="@+id/action_workoutscheduleFragment_to_addscheduleFragment"
+            app:destination="@id/addscheduleFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addscheduleFragment"
+        android:name="com.example.fitness.workouttracker.AddScheduleFragment"
+        android:label="fragment_add_schedule"
+        tools:layout="@layout/fragment_add_schedule"
+        >
+
+    </fragment>
+
+
+
+</navigation>
