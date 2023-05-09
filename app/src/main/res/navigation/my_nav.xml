@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/blueberrycakeFragment">
 
     <fragment
         android:id="@+id/splashFragment"
@@ -107,6 +107,10 @@
             android:id="@+id/action_scrollviewFragment_to_workouttrackerscrollviewFragment"
             app:destination="@id/workouttrackerscrollviewFragment" />
 
+        <action
+            android:id="@+id/action_fullbodyFragment_to_mealplannerFragment"
+            app:destination="@id/mealplannerFragment" />
+
     </fragment>
 
     <fragment
@@ -179,6 +183,33 @@
         android:name="com.example.fitness.workouttracker.AddScheduleFragment"
         android:label="fragment_add_schedule"
         tools:layout="@layout/fragment_add_schedule"
+        >
+
+    </fragment>
+    <fragment
+        android:id="@+id/mealplannerFragment"
+        android:name="com.example.fitness.mealplanner.MealPlannerFragment"
+        android:label="fragment_meal_planner"
+        tools:layout="@layout/fragment_meal_planner"
+        >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/breakfastFragment"
+        android:name="com.example.fitness.mealplanner.BreakfastFragment"
+        android:label="fragment_breakfast"
+        tools:layout="@layout/fragment_breakfast"
+        >
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/blueberrycakeFragment"
+        android:name="com.example.fitness.mealplanner.BlueBerryFragment"
+        android:label="fragment_blueberry_cake"
+        tools:layout="@layout/fragment_blue_berry"
         >
 
     </fragment>

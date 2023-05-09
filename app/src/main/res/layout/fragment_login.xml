@@ -39,10 +39,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-
-
-
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"

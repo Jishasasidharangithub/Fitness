@@ -18,9 +18,7 @@ import com.example.fitness.databinding.FragmentJampingJakeBinding
 class JampingJakeFragment : Fragment() {
 
     private var binding: FragmentJampingJakeBinding? = null
-    private val stepItemAdapter: StepItemAdapter by lazy {
-        StepItemAdapter()
-    }
+    private val stepItemAdapter: StepItemAdapter by lazy { StepItemAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

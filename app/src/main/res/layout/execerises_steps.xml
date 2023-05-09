@@ -49,14 +49,15 @@
 
     <TextView
         android:id="@+id/tvStepDescription"
-        android:layout_width="291dp"
+        android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_55sdp"
         android:lineSpacingExtra="@dimen/_2sdp"
         android:text="To make the gestures feel more relaxed, stretch your arms as you start this movement. No bending of hands."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/tvStepTitle"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvStepTitle"
         app:layout_constraintVertical_bias="1.0" />
 

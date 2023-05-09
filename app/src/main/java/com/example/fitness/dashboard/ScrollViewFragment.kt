@@ -39,6 +39,10 @@ class ScrollViewFragment : Fragment() {
             findNavController().navigate(R.id.workouttrackerscrollviewFragment)
         }
 
+        binding?.cvCalory?.setOnClickListener {
+            findNavController().navigate(R.id.mealplannerFragment)
+        }
+
         }
 
 }
