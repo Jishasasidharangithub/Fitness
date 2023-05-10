@@ -6,18 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitness.R
 import com.example.fitness.databinding.FragmentJampingJakeBinding
 import com.example.fitness.databinding.FragmentMealPlannerBinding
 import com.example.fitness.execersise_detail.StepItemAdapter
 import com.example.fitness.workouttracker.ExecricesItem
+import com.example.fitness.workouttracker.SubModelItemRecycler
+import com.example.fitness.workouttracker.WorkoutItem
 
-class MealPlannerFragment : Fragment() {
+class MealPlannerFragment : Fragment(), MealPlannerAdapter.MealPlannerAdapterListener {
 
     private var binding: FragmentMealPlannerBinding? = null
     private val mealPlannerAdapter: MealPlannerAdapter by lazy {
-        MealPlannerAdapter()
+        MealPlannerAdapter(this)
     }
 
     private var foodTime = mutableListOf<FoodTime>()
@@ -39,6 +42,10 @@ class MealPlannerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
+
+        binding?.btnCheck?.setOnClickListener {
+            findNavController().navigate(R.id.mealscheduleFragment)
+        }
     }
 
     private fun initViews() {
@@ -57,6 +64,11 @@ class MealPlannerFragment : Fragment() {
             )
         )
         mealPlannerAdapter.updateList(foodTime)
+    }
+
+    override fun viewMoreClick(foodTime: FoodTime, pos: Int) {
+        //logThis(workoutItem.title)
+        findNavController().navigate(R.id.breakfastFragment)
     }
 
 }

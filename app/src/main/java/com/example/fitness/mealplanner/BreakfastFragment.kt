@@ -5,18 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitness.R
 import com.example.fitness.databinding.FragmentBreakfastBinding
 import com.example.fitness.databinding.FragmentMealPlannerBinding
 
 
-class BreakfastFragment : Fragment() {
+class BreakfastFragment : Fragment(),  PopularItemAdapter.PopularAdapterListener {
 
     private var binding: FragmentBreakfastBinding? = null
     private val categoryItemAdapter: CategoryItemAdapter by lazy { CategoryItemAdapter() }
     private val dietItemAdapter: DietItemAdapter by lazy { DietItemAdapter() }
-    private val popularItemAdapter: PopularItemAdapter by lazy { PopularItemAdapter() }
+    private val popularItemAdapter: PopularItemAdapter by lazy { PopularItemAdapter(this) }
 
 
     private var categoryItem = mutableListOf<CategoryItem>()
@@ -92,6 +93,11 @@ class BreakfastFragment : Fragment() {
 
         )
         popularItemAdapter.updateList(popularItem)
+    }
+
+    override fun viewMoreClick(popularItem: PopularItem, pos: Int) {
+        //logThis(workoutItem.title)
+        findNavController().navigate(R.id.blueberrycakeFragment)
     }
 
 

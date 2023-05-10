@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/blueberrycakeFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/splashFragment"
@@ -193,6 +193,11 @@
         tools:layout="@layout/fragment_meal_planner"
         >
 
+        <action
+            android:id="@+id/action_mealplannerFragment_to_mealscheduleFragment"
+            app:destination="@id/mealscheduleFragment" />
+
+
     </fragment>
 
     <fragment
@@ -201,6 +206,10 @@
         android:label="fragment_breakfast"
         tools:layout="@layout/fragment_breakfast"
         >
+
+        <action
+            android:id="@+id/action_breakfastFragment_to_blueberrycakeFragment"
+            app:destination="@id/blueberrycakeFragment" />
 
 
     </fragment>
@@ -213,6 +222,17 @@
         >
 
     </fragment>
+
+    <fragment
+        android:id="@+id/mealscheduleFragment"
+        android:name="com.example.fitness.mealplanner.MealScheduleFragment"
+        android:label="fragment_meal_schedule"
+        tools:layout="@layout/fragment_meal_schedule"
+        >
+
+
+    </fragment>
+
 
 
 

@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitness.R
 import com.example.fitness.databinding.FragmentWorkoutScheduleBinding
-import com.example.fitness.utils.logThis
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
@@ -19,8 +18,7 @@ class WorkoutScheduleFragment : Fragment() {
     private var binding: FragmentWorkoutScheduleBinding? = null
     private val dayNames by lazy { DateFormatSymbols().weekdays }
 
-    private val calnderAdapter: CalnderAdapter by lazy {
-        CalnderAdapter(this)
+    private val calnderAdapter by lazy { CalnderAdapter(this)
     }
 
     override fun onCreateView(

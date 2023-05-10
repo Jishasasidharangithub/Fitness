@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitness.databinding.PopularItemBinding
 
-class PopularItemAdapter : RecyclerView.Adapter<PopularItemAdapter.PopularItemViewHolder>() {
+class PopularItemAdapter (private val listener: PopularAdapterListener) : RecyclerView.Adapter<PopularItemAdapter.PopularItemViewHolder>() {
 
     private val popularItem = mutableListOf<PopularItem>()
 
@@ -33,11 +33,18 @@ class PopularItemAdapter : RecyclerView.Adapter<PopularItemAdapter.PopularItemVi
                 holder.binding.ivPopular.setImageResource(image)
                 holder.binding.tvPopular.text = title
                 holder.binding.tvPopularCalory.text = description
+                holder.binding.cvPopular.setOnClickListener {
+                    listener.viewMoreClick(this, position)
+                }
             }
 
     }
 
     override fun getItemCount(): Int {
         return popularItem.size
+    }
+
+    interface PopularAdapterListener {
+        fun viewMoreClick(popularItem: PopularItem, pos: Int)
     }
 }

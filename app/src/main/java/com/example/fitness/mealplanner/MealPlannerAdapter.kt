@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitness.databinding.FoodTimeBinding
+import com.example.fitness.workouttracker.WorkOutAdapter
+import com.example.fitness.workouttracker.WorkoutItem
 
 
-class MealPlannerAdapter : RecyclerView.Adapter<MealPlannerAdapter.FoodTimeViewHolder>() {
+class MealPlannerAdapter (private val listener: MealPlannerAdapterListener): RecyclerView.Adapter<MealPlannerAdapter.FoodTimeViewHolder>() {
 
     private val foodTime = mutableListOf<FoodTime>()
 
@@ -34,10 +36,17 @@ class MealPlannerAdapter : RecyclerView.Adapter<MealPlannerAdapter.FoodTimeViewH
             holder.binding.tvBreakfast.text=title
             holder.binding.tvBreakfastFoods.text=description
             holder.binding.ivSelect1.setImageResource(image2)
+            holder.binding.ivSelect1.setOnClickListener {
+                listener.viewMoreClick(this, position)
+            }
         }
     }
 
     override fun getItemCount(): Int {
         return foodTime.size
+    }
+
+    interface MealPlannerAdapterListener {
+        fun viewMoreClick(foodTime: FoodTime, pos: Int)
     }
 }
