@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cvWorkoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_132sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_12sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DFE3F8">
+
+            <TextView
+                android:id="@+id/tvFullBodyWorkOut1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fullbody Workout"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvExercisesTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="11 Exercises | 32mins"
+                app:layout_constraintEnd_toEndOf="@id/tvFullBodyWorkOut1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvFullBodyWorkOut1"
+                app:layout_constraintTop_toBottomOf="@id/tvFullBodyWorkOut1"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewMore"
+                android:layout_width="@dimen/_94sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/workout1gradient"
+                android:text="View more"
+                android:textAllCaps="false"
+                android:textColor="#92A3FD"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvExercisesTime"
+                app:layout_constraintVertical_bias="0.416" />
+
+            <ImageView
+                android:id="@+id/ivFullBody"
+                android:layout_width="113dp"
+                android:layout_height="116dp"
+                android:background="@drawable/workout1gradient"
+                android:src="@drawable/fullbody"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toEndOf="@id/tvFullBodyWorkOut1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.363" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+

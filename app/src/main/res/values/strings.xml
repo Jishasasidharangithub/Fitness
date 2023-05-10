@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Fitness</string>
+    <string name="checkbox">By continuing you accept our Privacy Policy and Term of Use</string>
+    <string name="title1">Hey there,</string>
+    <string name="title2">Create an Account</string>
+    <string name="FirstName">First Name</string>
+    <string name="LastName">Last Name</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Register">Register</string>
+    <string name="Or">Or</string>
+    <string name="end">Already have an account? </string>
+    <string name="Login">Login </string>
+    <string name="Profile">Let’s complete your profile </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

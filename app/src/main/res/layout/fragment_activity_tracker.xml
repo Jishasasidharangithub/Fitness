@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslToolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvActivityTracker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Activity Tracker"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/ic_back_navs"
+            app:layout_constraintBottom_toBottomOf="@+id/tvActivityTracker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvActivityTracker" />
+
+        <ImageView
+            android:id="@+id/ivDetailNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/ic_detail_navs"
+            app:layout_constraintBottom_toBottomOf="@+id/tvActivityTracker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvActivityTracker" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvTodayTargetCard"
+            android:layout_width="match_parent"
+            android:layout_height="177dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            app:cardCornerRadius="@dimen/_22sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvActivityTracker"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="177dp"
+                android:background="@drawable/gradient5">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glH1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.15" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glV5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.94" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.05" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glV3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.47" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glV4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <TextView
+                    android:id="@+id/tvTodayTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today Target"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/glV2"
+                    app:layout_constraintTop_toBottomOf="@+id/glH1" />
+
+                <ImageView
+                    android:id="@+id/ivPlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.788"
+                    app:layout_constraintStart_toStartOf="@+id/glV3"
+                    app:layout_constraintTop_toBottomOf="@+id/glH1" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="151dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_14sdp"
+                    app:layout_constraintStart_toStartOf="@+id/glV2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTodayTarget"
+                    app:layout_constraintEnd_toEndOf="@id/glV3">
+
+                    <ImageView
+                        android:id="@+id/ivGlass"
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:src="@drawable/ic_glass" />
+
+                    <TextView
+                        android:id="@+id/tvWaterQuentity"
+                        android:layout_width="37dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_38sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="8L"
+                        android:textColor="#9DCEFF"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:layout_marginStart="@dimen/_38sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:text="Water Intaken"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="150dp"
+                    android:layout_height="79dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/glV5"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTodayTarget"
+                    app:layout_constraintStart_toStartOf="@+id/glV4">
+
+                    <ImageView
+                        android:id="@+id/ivBoot"
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:src="@drawable/ic_boots" />
+
+                    <TextView
+                        android:id="@+id/tvFootSteps"
+                        android:layout_width="61dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_38sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="2400"
+                        android:textColor="#9DCEFF"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:layout_marginStart="@dimen/_38sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:text="Foot Steps"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvActivityProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Progress"
+            app:layout_constraintTop_toBottomOf="@+id/cvTodayTargetCard"
+            android:layout_marginStart="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_14ssp"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/ivDropDownWeekly"
+            android:layout_width="87dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/ic_dropdown_weekly"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvActivityProgress"
+            app:layout_constraintTop_toBottomOf="@+id/cvTodayTargetCard" />
+
+        <ImageView
+            android:id="@+id/ivActivityProgressGraph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_activity_progress_graph"
+            app:layout_constraintTop_toBottomOf="@+id/tvActivityProgress"
+            tools:layout_editor_absoluteX="20dp"
+            app:layout_constraintStart_toStartOf="@+id/tvActivityProgress"
+            app:layout_constraintEnd_toEndOf="@+id/ivDropDownWeekly"/>
+
+        <TextView
+            android:id="@+id/tvLatestActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest Activity"
+            app:layout_constraintTop_toBottomOf="@+id/ivActivityProgressGraph"
+            app:layout_constraintStart_toStartOf="@+id/ivActivityProgressGraph"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/tvSeemore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="8dp"
+            android:text="See more"
+            app:layout_constraintStart_toEndOf="@+id/tvLatestActivity"
+            app:layout_constraintTop_toBottomOf="@+id/ivActivityProgressGraph" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cvNotificationItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintEnd_toEndOf="@+id/cslToolbar1"
+        app:layout_constraintStart_toStartOf="@+id/cslToolbar1"
+        app:layout_constraintTop_toBottomOf="@+id/cslToolbar1"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivNotificationItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_vector1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNotificationItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Drinking 300ml Water"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.138"
+                app:layout_constraintStart_toEndOf="@+id/ivNotificationItem1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNotificationDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="About 3 minutes ago"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.111"
+                app:layout_constraintStart_toEndOf="@+id/ivNotificationItem1"
+                app:layout_constraintTop_toBottomOf="@+id/tvNotificationItem1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/ivThreeDot"
+                android:layout_width="16dp"
+                android:layout_height="27dp"
+                android:src="@drawable/ic_three_dot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.752"
+                app:layout_constraintStart_toEndOf="@+id/tvNotificationItem1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.433" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
